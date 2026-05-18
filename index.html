@@ -166,12 +166,19 @@
 
         teaseBtn.addEventListener('click', () => {
             message.innerHTML = `<p>${teasers[0]}</p><p class="small-note">แอบชวนให้สาวบัญชีเขินนิด ๆ แบบไม่ต้องพูดตรง ๆ</p>`;
+            teaserIndex = 1;
         });
 
         moreBtn.addEventListener('click', () => {
-            const text = teasers[teaserIndex % teasers.length];
-            message.innerHTML = `<p>${text}</p><p class="small-note">กดอีกครั้งเพื่อแซวเพิ่มได้เรื่อย ๆ</p>`;
-            teaserIndex += 1;
+            if (teaserIndex < teasers.length) {
+                message.innerHTML = `<p>${teasers[teaserIndex]}</p><p class="small-note">กดอีกครั้งถ้ายังอยากได้อีก</p>`;
+                teaserIndex += 1;
+                return;
+            }
+
+            message.innerHTML = `<p>หมดแล้วจ้า... อยากได้อีกไปถามคนทำเพิ่มสิ 😘</p>`;
+            moreBtn.disabled = true;
+            moreBtn.style.cursor = 'default';
         });
     </script>
 </body>
