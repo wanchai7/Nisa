@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>แซวสาวบัญชี</title>
+    <title>Nisa</title>
     <style>
         :root {
             --bg-start: #d7ecff;
@@ -23,6 +23,7 @@
             margin: 0;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             background: radial-gradient(circle at top left, var(--bg-start), transparent 45%),
@@ -141,11 +142,105 @@
             font-size: 0.95rem;
             color: #6c5b86;
         }
+
+        .footer {
+            width: 100%;
+            margin-top: auto;
+            background: #10141a;
+            color: #e0e7ff;
+            padding: 32px 24px 24px;
+        }
+
+        .footer-inner {
+            width: min(1040px, 100%);
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .footer-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .footer-icon:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, 0.18);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 24px;
+            font-size: 0.95rem;
+            color: #d1d5ff;
+        }
+
+        .footer-links a {
+            color: inherit;
+            text-decoration: none;
+            opacity: 0.85;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-bottom {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            padding-top: 8px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #9ba3c5;
+            font-size: 0.88rem;
+        }
+
+        .footer-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            padding: 8px 12px;
+        }
+
+        .footer-badge img {
+            width: 38px;
+            height: 38px;
+            border-radius: 14px;
+            object-fit: cover;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
     </style>
 </head>
 <body>
     <div class="card">
-        <h1 class="title">แซวสาวบัญชี</h1>
+        <h1 class="title">You socute Nisa</h1>
         <p class="subtitle">หน้าตาเรียบหรูแบบนักบัญชี แต่ก็มีเสน่ห์แบบสีฟ้า-ชมพูที่น่ารักจนต้องแอบมอง</p>
         <img src="nisa.png" alt="Nisa" class="profile-img" />
 
@@ -159,6 +254,32 @@
         </div>
         <div class="hint">โทนฟ้า-ชมพูให้ความรู้สึกสดใส ใส ๆ แต่ก็แอบมีความเป็นผู้ใหญ่นิด ๆ แบบสาวบัญชี</div>
     </div>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-social">
+                <a href="#" class="footer-icon" aria-label="Facebook">F</a>
+                <a href="#" class="footer-icon" aria-label="Instagram">I</a>
+                <a href="#" class="footer-icon" aria-label="Twitter">T</a>
+                <a href="#" class="footer-icon" aria-label="Google">G</a>
+                <a href="#" class="footer-icon" aria-label="YouTube">Y</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">News</a>
+                <a href="#">About</a>
+                <a href="#">Contact Us</a>
+                <a href="#">Our Team</a>
+            </div>
+            <div class="footer-bottom">
+                <span>Copyright ©2026 Designed by ผู้จัดทำ</span>
+                <div class="footer-badge">
+                    <img src="view.png" alt="ผู้จัดทำ" />
+                    <span>ผู้จัดทำ</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script>
         const teaseBtn = document.getElementById('teaseBtn');
