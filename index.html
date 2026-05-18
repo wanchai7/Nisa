@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แซวสาวบัญชี</title>
+    <style>
+        :root {
+            --bg-start: #d7ecff;
+            --bg-end: #ffe4f8;
+            --blue: #2d7df0;
+            --pink: #ff79b6;
+            --text: #2b2a45;
+            --card: rgba(255, 255, 255, 0.95);
+            --shadow: rgba(45, 125, 240, 0.18);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at top left, var(--bg-start), transparent 45%),
+                        radial-gradient(circle at bottom right, var(--pink), transparent 40%),
+                        linear-gradient(180deg, #e5f1ff 0%, #fdf0fb 100%);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 24px;
+        }
+
+        .card {
+            width: min(620px, 100%);
+            background: var(--card);
+            border-radius: 32px;
+            box-shadow: 0 24px 70px var(--shadow);
+            padding: 42px 34px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+        }
+
+        .title {
+            margin: 0 0 12px;
+            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            letter-spacing: -0.05em;
+            color: var(--blue);
+        }
+
+        .subtitle {
+            margin: 0 auto 26px;
+            max-width: 520px;
+            color: #4e4a67;
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        .tease {
+            margin: 0 auto 32px;
+            max-width: 520px;
+            padding: 22px 22px 18px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(252, 201, 239, 0.95), rgba(195, 222, 255, 0.95));
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            color: #3f3a5c;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 22px;
+        }
+
+        .button {
+            padding: 16px 26px;
+            border-radius: 999px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            font-weight: 700;
+            color: #ffffff;
+            min-width: 160px;
+            font-size: 1rem;
+            box-shadow: 0 18px 30px rgba(45, 125, 240, 0.18);
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+        .button-pink {
+            background: linear-gradient(135deg, #ff7fb4, #ff4d8e);
+        }
+
+        .button-blue {
+            background: linear-gradient(135deg, #3c8cff, #2d62f2);
+        }
+
+        .message {
+            min-height: 110px;
+            margin: 0 auto;
+            max-width: 560px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(73, 133, 246, 0.18);
+            border-radius: 24px;
+            padding: 24px 26px;
+            color: #403f5e;
+            font-size: 1rem;
+            line-height: 1.78;
+            transition: background 0.3s ease, opacity 0.3s ease;
+        }
+
+        .message p {
+            margin: 0 0 14px;
+        }
+
+        .message p:last-child {
+            margin-bottom: 0;
+        }
+
+        .hint {
+            margin-top: 18px;
+            font-size: 0.95rem;
+            color: #6c5b86;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1 class="title">แซวสาวบัญชี</h1>
+        <p class="subtitle">หน้าตาเรียบหรูแบบนักบัญชี แต่ก็มีเสน่ห์แบบสีฟ้า-ชมพูที่น่ารักจนต้องแอบมอง</p>
+
+        <div class="actions">
+            <button id="teaseBtn" class="button button-pink">แซวเบา ๆ</button>
+            <button id="moreBtn" class="button button-blue">อยากได้อีก</button>
+        </div>
+
+        <div id="message" class="message">
+            <p>คลิกดูคำแซวหวาน ๆ ให้สาวบัญชียิ้มออกแบบน่ารัก ๆ</p>
+        </div>
+        <div class="hint">โทนฟ้า-ชมพูให้ความรู้สึกสดใส ใส ๆ แต่ก็แอบมีความเป็นผู้ใหญ่นิด ๆ แบบสาวบัญชี</div>
+    </div>
+
+    <script>
+        const teaseBtn = document.getElementById('teaseBtn');
+        const moreBtn = document.getElementById('moreBtn');
+        const message = document.getElementById('message');
+
+        const teasers = [
+            'เธอทำให้บัญชีดูหวานขึ้นเหมือนกราฟที่ขึ้นพรวดพราดทุกไตรมาส',
+            'ยิ่งเห็นเธอจัดสมุดบัญชี ยิ่งรู้สึกว่าโลกนี้มีระเบียบแบบน่ารักมากขึ้น',
+            'แค่เธอยิ้มก็เหมือนเติมสีฟ้า-ชมพูให้กับวันธรรมดา',
+            'คนเรียนบัญชีอย่างเธอน่ารักจนอยากจะเป็นคนช่วยปิดงบทุกเดือน',
+            'สายตาเธอทำให้เลขทุกตัวในหัวใจมีความหมายและสีสันขึ้นทันที'
+        ];
+
+        let teaserIndex = 0;
+
+        teaseBtn.addEventListener('click', () => {
+            message.innerHTML = `<p>${teasers[0]}</p><p class="small-note">แอบชวนให้สาวบัญชีเขินนิด ๆ แบบไม่ต้องพูดตรง ๆ</p>`;
+        });
+
+        moreBtn.addEventListener('click', () => {
+            const text = teasers[teaserIndex % teasers.length];
+            message.innerHTML = `<p>${text}</p><p class="small-note">กดอีกครั้งเพื่อแซวเพิ่มได้เรื่อย ๆ</p>`;
+            teaserIndex += 1;
+        });
+    </script>
+</body>
+</html>
