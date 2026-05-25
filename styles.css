@@ -606,7 +606,7 @@ body {
 .slide {
     min-width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     flex: 0 0 100%;
 }
 
@@ -631,8 +631,26 @@ body {
 .arrow-outside.right { margin-right: 6px; }
 
 @media (max-width: 760px) {
-    .slider { width: min(100%, 280px); height: 320px; }
-    .arrow-outside { width: 48px; height: 48px; font-size: 22px; }
+    .slider-wrap {
+        position: relative;
+        width: 100%;
+        max-width: 340px;
+        gap: 0;
+    }
+    .slider { width: 100%; height: 340px; }
+    .arrow-outside { 
+        position: absolute;
+        width: 44px; 
+        height: 44px; 
+        font-size: 22px; 
+        top: 50%;
+        margin-top: -22px; /* fallback for transform */
+        z-index: 10;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .arrow-outside.left { left: -10px; margin-left: 0; }
+    .arrow-outside.right { right: -10px; margin-right: 0; }
 }
 
 .highlight-phrase {
