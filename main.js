@@ -1,3 +1,24 @@
+// Mobile Menu behaviors
+(function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    }
+})();
+
 // Main page behaviors (moved from inline script)
 (function () {
     const teaseBtn = document.getElementById('teaseBtn');
@@ -9,7 +30,9 @@
         'ยิ่งเห็นเธอจัดสมุดบัญชี ยิ่งรู้สึกว่าโลกนี้มีระเบียบแบบน่ารักมากขึ้น',
         'แค่เธอยิ้มก็เหมือนเติมสีฟ้า-ชมพูให้กับวันธรรมดา',
         'คนเรียนบัญชีอย่างเธอน่ารักจนอยากจะเป็นคนช่วยปิดงบทุกเดือน',
-        'สายตาเธอทำให้เลขทุกตัวในหัวใจมีความหมายและสีสันขึ้นทันที'
+        'สายตาเธอทำให้เลขทุกตัวในหัวใจมีความหมายและสีสันขึ้นทันที',
+        '<span class="highlight-phrase">"คุณน่ารักเกินไปแล้วนิสา"</span>',
+        '<span class="highlight-phrase">"I love you Nisa"</span>',
     ];
 
     let teaserIndex = 0;
@@ -44,7 +67,7 @@
     if (!slidesContainer || slides.length === 0) return;
 
     function updateSlider() {
-        const offset = currentSlide * 50; // each slide is 50% of container width
+        const offset = currentSlide * 100; // each slide is 100% of container width
         slidesContainer.style.transform = `translateX(-${offset}%)`;
         slides.forEach((s, i) => s.setAttribute('aria-hidden', i !== currentSlide));
     }

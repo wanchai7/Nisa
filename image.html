@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nisa</title>
+    <title>Image Gallery | Nisa</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar">
-        <a href="index.html" class="nav-brand">Yanisa.</a>
+        <a href="index.html" class="nav-brand">NISA.</a>
         <button class="menu-toggle" aria-label="Toggle navigation">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -16,38 +16,45 @@
         </button>
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="#Nisa">Gallery</a>
+            <a href="#slider">Gallery</a>
             <a href="image.html">Image</a>
-            <a href="#Contact">Contact</a>
+            <a href="index.html#Contact">Contact</a>
         </div>
     </nav>
+
     <div class="decor-shape shape-1"></div>
     <div class="decor-shape shape-2"></div>
     <div class="decor-shape shape-3"></div>
     <div class="decor-shape shape-4"></div>
-    <div class="card">
-        <h1 class="title">You socute Nisa</h1>
-        <p class="subtitle">หน้าตาเรียบหรูแบบนักบัญชีก็น่ารักไม่เบาเลยนะเนี่ย</p>
-        <div class="slider-wrap" id="Nisa">
+
+    <div class="card" id="slider">
+        <h1 class="title">Image Gallery</h1>
+        <p class="subtitle highlight">สมัยพี่เฟี้ยวๆเลยนะเนี่ย สวยหวานสดใสจนหยุดมองไม่ได้</p>
+
+        <div class="slider-wrap">
             <button class="arrow-outside left" aria-label="Previous">‹</button>
-            <div class="slider" aria-label="Nisa image slider">
+            <div class="slider" aria-label="Image slider">
                 <div class="slides">
-                    <img src="nisa.png" class="slide" alt="Nisa 1">
-                    <img src="nisa2.png" class="slide" alt="Nisa 2">
+                    <img src="yanisa1.png" class="slide" alt="Yanisa 1">
+                    <img src="yanisa2.png" class="slide" alt="Yanisa 2">
+                    <img src="yanisa3.png" class="slide" alt="Yanisa 3">
+                    <img src="yanisa4.png" class="slide" alt="Yanisa 4">
+                    <img src="yanisa5.png" class="slide" alt="Yanisa 5">
+                    <img src="yanisa6.png" class="slide" alt="Yanisa 6">
+                    <img src="yanisa7.png" class="slide" alt="Yanisa 7">
                 </div>
             </div>
             <button class="arrow-outside right" aria-label="Next">›</button>
         </div>
 
         <div class="actions">
-            <button id="teaseBtn" class="button button-pink">แซวเบา ๆ</button>
-            <button id="moreBtn" class="button button-blue">อยากได้อีก</button>
+            <button onclick="window.location.href='index.html'" class="button button-blue">กลับหน้าหลัก</button>
+            <a href="index.html#Contact" class="button button-pink" style="text-decoration:none; display:inline-flex; align-items:center; justify-content:center;">ติดต่อ</a>
         </div>
 
-        <div id="message" class="message">
-            <p>คลิกดูเลื่อนดูนะสาวบีญชีตัวน้อย ออกแบบให้โดยเฉพาะเลยนะ</p>
+        <div class="message">
+            <p>เลื่อนดูรูปทั้งหมดได้ด้วยปุ่มซ้าย-ขวา หรือรอสไลด์อัตโนมัติ</p>
         </div>
-        <div class="hint">ไม่รู้ว่าจะชอบหรือป่าวแต่ตั้งใจทำให้เลยนะ "Yanisa"</div>
     </div>
 
     <footer class="footer" id="Contact">
@@ -60,10 +67,10 @@
             <!-- 2. Links & Copyright -->
             <div class="footer-col footer-info-col">
                 <div class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">News</a>
+                    <a href="index.html">Home</a>
+                    <a href="index.html#News">News</a>
                     <a href="image.html">Images</a>
-                    <a href="#">Contact Us</a>
+                    <a href="index.html#Contact">Contact Us</a>
                 </div>
                 <div class="footer-bottom">
                     <span>Copyright ©2026 Designed by ผู้จัดทำ</span>
